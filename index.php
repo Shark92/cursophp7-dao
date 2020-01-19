@@ -20,11 +20,19 @@ require_once("config.php");
 //$usuario->login("user2", "321");
 //echo $usuario;
 
-$aluno = new Usuario("zabomga", "kkk");
+//criando um novo usuário
+//$aluno = new Usuario("zabomga", "kkk");
+//$aluno->insert();
+//echo $aluno;
 
-$aluno->insert();
+//alterando usuário(update)
+$usuario = new Usuario();
 
-echo $aluno;
+$usuario->loadById(6);
+
+$usuario->update("chucrute", "<===3");
+
+echo $usuario;
 
 /*
 $sql = new Sql();
